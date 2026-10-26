@@ -6,15 +6,16 @@ Prosjektet bruker Next.js App Router, TypeScript strict mode, Tailwind CSS, Supa
 
 ## Lokal oppstart
 
-Krever Node.js 20.9 eller nyere.
+Krever Node.js 20.9 eller nyere. Hent prosjektet fra [GitHub](https://github.com/moali-143/-Nito10sek):
 
 ```bash
+git clone https://github.com/moali-143/-Nito10sek.git
+cd -- -Nito10sek
 npm ci --legacy-peer-deps
-cp .env.example .env.local
 npm run dev
 ```
 
-Åpne `http://localhost:3000`. Uten Supabase-verdier fungerer en lokal testmodus: forsøk vises i topplisten i samme nettleser, og testdeltakere kan slettes enkeltvis eller nullstilles samlet etter bekreftelse. Den første oppdaterte sidelastingen nullstiller også lokale testresultater fra 26.10.2026 i tidssonen Europe/Oslo. Resultatene sendes ikke til en database eller andre enheter. Adminfunksjoner for permanente data krever Supabase. Lockfilen bruker npm sin legacy peer resolver på grunn av en Arborist-feil i npm 10 under opprinnelig installasjon.
+Åpne `http://localhost:3000`. For lokal forhåndsvisning skal `.env.local` ikke opprettes. Uten Supabase-verdier fungerer lokal testmodus: forsøk vises i topplista i samme nettleser, og testdeltakere kan slettes enkeltvis eller nullstilles samlet etter bekreftelse. Den første oppdaterte sidelastingen nullstiller også lokale testresultater fra 26.10.2026 i tidssonen Europe/Oslo. Resultatene sendes ikke til en database eller andre enheter. For en felles toppliste på flere PC-er må Supabase konfigureres nedenfor. Lockfilen bruker npm sin legacy peer resolver på grunn av en Arborist-feil i npm 10 under opprinnelig installasjon.
 
 ## Supabase-oppsett
 
